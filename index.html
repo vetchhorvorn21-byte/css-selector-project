@@ -19,7 +19,6 @@
 body{
     min-height:100vh;
     padding:50px;
-
     background:
     radial-gradient(circle at top left,#ffffff 0%,transparent 35%),
     radial-gradient(circle at bottom right,#bfe7ff 0%,transparent 35%),
@@ -47,18 +46,23 @@ header p{
     font-size:20px;
 }
 
-/* Search Box */
 .search-box{
     text-align:center;
     margin-bottom:40px;
 }
 
+/* Attribute Selector */
+input[type="text"]{
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:10px;
+    margin:15px 0;
+    outline:none;
+}
+
 .search-box input{
     width:450px;
-    padding:14px;
-    border:none;
-    border-radius:30px;
-    outline:none;
 }
 
 /* Courses */
@@ -78,12 +82,12 @@ header p{
     backdrop-filter:blur(10px);
     box-shadow:0 8px 25px rgba(0,0,0,.08);
     position:relative;
+    transition:0.3s;
 }
 
 /* Child Selector */
 #courses > .course-card:hover{
     transform:translateY(-8px);
-    transition:0.3s;
 }
 
 /* Descendant Selector */
@@ -108,6 +112,7 @@ header p{
     justify-content:center;
     align-items:center;
     font-size:30px;
+    font-weight:bold;
     margin-bottom:20px;
 }
 
@@ -127,19 +132,10 @@ header p{
 .lecturer{
     margin:15px 0;
     color:#334155;
+    font-weight:bold;
 }
 
-/* Attribute Selector */
-input[type="text"]{
-    width:100%;
-    padding:12px;
-    border:none;
-    border-radius:10px;
-    margin:15px 0;
-    outline:none;
-}
-
-/* Badge */
+/* Tags */
 .tag{
     position:absolute;
     top:20px;
@@ -193,6 +189,7 @@ input[type="text"]{
 
 </style>
 </head>
+
 <body>
 
 <header>
