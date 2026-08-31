@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LearnDev Courses</title>
+
+<style>
+
+/* Universal Selector */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+/* Element Selector */
+body{
+    min-height:100vh;
+    padding:50px;
+
+    background:
+    radial-gradient(circle at top left,#ffffff 0%,transparent 35%),
+    radial-gradient(circle at bottom right,#bfe7ff 0%,transparent 35%),
+    linear-gradient(135deg,#eaf8ff,#d8f0ff,#c8e8ff);
+}
+
+/* ID Selector */
+#main-title{
+    color:#2563eb;
+    font-size:60px;
+}
+
+/* Grouping Selector */
+h1,p{
+    text-align:center;
+}
+
+header{
+    text-align:center;
+    margin-bottom:35px;
+}
+
+header p{
+    color:#475569;
+    font-size:20px;
+}
+
+/* Search Box */
+.search-box{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.search-box input{
+    width:450px;
+    padding:14px;
+    border:none;
+    border-radius:30px;
+    outline:none;
+}
+
+/* Courses */
+#courses{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+}
+
+/* Class Selector */
+.course-card{
+    width:350px;
+    padding:30px;
+    border-radius:25px;
+    background:rgba(255,255,255,.45);
+    backdrop-filter:blur(10px);
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+    position:relative;
+}
+
+/* Child Selector */
+#courses > .course-card:hover{
+    transform:translateY(-8px);
+    transition:0.3s;
+}
+
+/* Descendant Selector */
+.course-card p{
+    text-align:left;
+    color:#64748b;
+    line-height:1.8;
+    margin:15px 0;
+}
+
+.course-title{
+    font-size:45px;
+    color:#0f172a;
+}
+
+/* Icons */
+.icon{
+    width:80px;
+    height:80px;
+    border-radius:20px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:30px;
+    margin-bottom:20px;
+}
+
+.html-icon{
+    background:#ffe5d0;
+}
+
+.css-icon{
+    background:#eadcff;
+}
+
+.js-icon{
+    background:#fff0b3;
+}
+
+/* Lecturer */
+.lecturer{
+    margin:15px 0;
+    color:#334155;
+}
+
+/* Attribute Selector */
+input[type="text"]{
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:10px;
+    margin:15px 0;
+    outline:none;
+}
+
+/* Badge */
+.tag{
+    position:absolute;
+    top:20px;
+    right:20px;
+    padding:8px 15px;
+    border-radius:20px;
+    font-size:12px;
+    font-weight:bold;
+}
+
+.popular{
+    background:#ffd8b4;
+    color:#d35400;
+}
+
+.trending{
+    background:#e5d5ff;
+    color:#6d28d9;
+}
+
+.new{
+    background:#ffe48b;
+    color:#b45309;
+}
+
+/* Buttons */
+.btn{
+    width:100%;
+    padding:14px;
+    border:none;
+    border-radius:12px;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.orange-btn{
+    background:#ff7315;
+    color:white;
+}
+
+.purple-btn{
+    background:#8b5cf6;
+    color:white;
+}
+
+.yellow-btn{
+    background:#f6c026;
+    color:#111827;
+}
+
+</style>
+</head>
+<body>
+
+<header>
+    <h1 id="main-title">✨ LearnDev</h1>
+    <p>Learn HTML, CSS & JavaScript from Beginner to Advanced</p>
+</header>
+
+<div class="search-box">
+    <input type="text" placeholder="🔍 Search courses...">
+</div>
+
+<section id="courses">
+
+    <!-- HTML -->
+    <div class="course-card">
+        <span class="tag popular">POPULAR</span>
+
+        <div class="icon html-icon">&lt;/&gt;</div>
+
+        <h2 class="course-title">HTML</h2>
+
+        <p>
+            Learn the foundation of every website.
+            Master semantic HTML5 elements,
+            forms, accessibility and structure.
+        </p>
+
+        <div class="lecturer">
+            <strong>Lecturer:</strong> Sophal Kith
+        </div>
+
+        <input type="text" placeholder="Add a note...">
+
+        <button class="btn orange-btn">Learn More →</button>
+    </div>
+
+    <!-- CSS -->
+    <div class="course-card">
+        <span class="tag trending">TRENDING</span>
+
+        <div class="icon css-icon">{ }</div>
+
+        <h2 class="course-title">CSS</h2>
+
+        <p>
+            Master CSS Selectors, Flexbox,
+            Grid layouts, animations,
+            and responsive design.
+        </p>
+
+        <div class="lecturer">
+            <strong>Lecturer:</strong> Vet Chhorvorn
+        </div>
+
+        <input type="text" placeholder="Add a note...">
+
+        <button class="btn purple-btn">Learn More →</button>
+    </div>
+
+    <!-- JavaScript -->
+    <div class="course-card">
+        <span class="tag new">NEW</span>
+
+        <div class="icon js-icon">JS</div>
+
+        <h2 class="course-title">JavaScript</h2>
+
+        <p>
+            Learn DOM manipulation,
+            asynchronous programming,
+            ES6+ features and frameworks.
+        </p>
+
+        <div class="lecturer">
+            <strong>Lecturer:</strong> Den Molika
+        </div>
+
+        <input type="text" placeholder="Add a note...">
+
+        <button class="btn yellow-btn">Learn More →</button>
+    </div>
+
+</section>
+
+</body>
+</html>
