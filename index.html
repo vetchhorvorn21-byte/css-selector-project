@@ -19,6 +19,7 @@
 body{
     min-height:100vh;
     padding:50px;
+
     background:
     radial-gradient(circle at top left,#ffffff 0%,transparent 35%),
     radial-gradient(circle at bottom right,#bfe7ff 0%,transparent 35%),
@@ -46,23 +47,18 @@ header p{
     font-size:20px;
 }
 
+/* Search Box */
 .search-box{
     text-align:center;
     margin-bottom:40px;
 }
 
-/* Attribute Selector */
-input[type="text"]{
-    width:100%;
-    padding:12px;
-    border:none;
-    border-radius:10px;
-    margin:15px 0;
-    outline:none;
-}
-
 .search-box input{
     width:450px;
+    padding:14px;
+    border:none;
+    border-radius:30px;
+    outline:none;
 }
 
 /* Courses */
@@ -82,12 +78,12 @@ input[type="text"]{
     backdrop-filter:blur(10px);
     box-shadow:0 8px 25px rgba(0,0,0,.08);
     position:relative;
-    transition:0.3s;
 }
 
 /* Child Selector */
 #courses > .course-card:hover{
     transform:translateY(-8px);
+    transition:0.3s;
 }
 
 /* Descendant Selector */
@@ -112,7 +108,6 @@ input[type="text"]{
     justify-content:center;
     align-items:center;
     font-size:30px;
-    font-weight:bold;
     margin-bottom:20px;
 }
 
@@ -132,10 +127,19 @@ input[type="text"]{
 .lecturer{
     margin:15px 0;
     color:#334155;
-    font-weight:bold;
 }
 
-/* Tags */
+/* Attribute Selector */
+input[type="text"]{
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:10px;
+    margin:15px 0;
+    outline:none;
+}
+
+/* Badge */
 .tag{
     position:absolute;
     top:20px;
@@ -186,24 +190,9 @@ input[type="text"]{
     background:#f6c026;
     color:#111827;
 }
-.course-card:hover{
-    transform: translateY(-10px);
-    transition: 0.3s;
-}
-
-.btn:hover{
-    opacity: 0.9;
-    transform: scale(1.03);
-    transition: 0.3s;
-}
-
-.search-box input{
-    box-shadow: 0 5px 15px rgba(37,99,235,.15);
-}
 
 </style>
 </head>
-
 <body>
 
 <header>
